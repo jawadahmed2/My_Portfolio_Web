@@ -40,8 +40,6 @@ nav ul li a:hover {
   color: red;
 }
 
-
-
 /* Titles */
 h1,
 h2,
@@ -54,17 +52,15 @@ h6 {
   color: #333;
 }
 
-
 .centered {
   text-align: center;
 }
 
-
 /* Paragraph & Typographic */
 p {
-    line-height: 28px;
-    margin-bottom: 25px;
-    font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 25px;
+  font-size: 16px;
 }
 hr {
   display: block;
@@ -74,7 +70,6 @@ hr {
   margin: 1em 0;
   padding: 0;
 }
-
 
 /* ================== PORTFOLIO IMAGES HOVER EFFECT ================== */
 /* Effects also are controled by hover.zoom.js */
@@ -113,9 +108,13 @@ hr {
 }
 
 .position {
-  position:absolute;
-  top:25%;
-  left:12%;
+  position: absolute;
+  top: 25%;
+  left: 12%;
+}
 
-
+/* skill page style */
+.skills-section {
+  position: relative;
+  left: 25%;
 }
