@@ -12,20 +12,24 @@
   height: 100vh;
   background: #eff4fd;
   position: relative;
+
 }
 
-nav {
+.navbar {
   display: flex;
   width: 84%;
   margin: auto;
   padding: 20px 0;
   align-items: center;
   justify-content: space-between;
+
 }
 
 .logo {
   width: 80px;
-  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav ul li {
