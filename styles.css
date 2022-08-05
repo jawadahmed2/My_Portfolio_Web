@@ -123,6 +123,7 @@ span {
 .social a:hover {
   color: orange;
 }
+/* Index page style end here */
 
 /* Add style for about.html page */
 
@@ -186,3 +187,6 @@ span {
   .social-about a:hover {
     color: orange;
   }
+  /* About page style end here */
+
+  
