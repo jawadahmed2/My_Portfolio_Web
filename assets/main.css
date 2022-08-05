@@ -118,3 +118,6 @@ hr {
   position: relative;
   left: 25%;
 }
+/* background: */
+progress::-webkit-progress-bar {background-color: black; width: 100%;}
+progress {background-color: black;}
