@@ -74,6 +74,14 @@ span{
     border-radius: 5px;
 }
 
+.detail a:hover{
+    color:red;
+}
+
+.detail a:active{
+    color:green;
+}
+
 .images{
     width: 45%;
     height: 80%;
