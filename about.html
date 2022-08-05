@@ -6,34 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
-    <link rel="stylesheet" href="styles.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap core CSS -->
+    <link href="assets/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="assets/main.css">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/hover.zoom.js"></script>
+    <script src="assets/hover.zoom.conf.js"></script>
+
 </head>
 
 <body>
+
     <div class="hero">
         <nav>
             <img src="images/logo.png" class="logo">
             <ul>
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
+                <li><a href="about.html">ABOUT</a></li>
                 <li><a href="skills.html">SKILLS</a></li>
                 <li><a href="portfolio.html">PORTFOLIO</a></li>
                 <li><a href="#">SERVICES</a></li>
                 <li><a href="hire.html">HIRE ME</a></li>
             </ul>
         </nav>
-        <div class="about-section" id="about">
+    </div>
+
+    <div class="position">
+        <div id="ww">
             <div class="container">
-                <div class="about-header">
-                    <h3>about</h3>
-                    <div class="about-imag">
-                        <img src="images/about-pic.jpg" alt="about-image" />
-                    </div>
-                    <div class="about-text">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 centered">
+                        <div class='about-imag'>
+                            <img src="images/about-pic.jpg" alt="about picture">
+                        </div>
+                        <h1>About Me!</h1>
                         <p>This is Jawad Ahmed, last year BSCS student at Namal University Mianwali, Pakistan.</p>
                         <p>Results-driven computer scientist, well-equipped with python, development, machine learning
                             and deep learning.
@@ -41,23 +52,24 @@
                             and result-oriented
                             attitude. Passionate to work in an organization to extend my experience in the computer
                             industry and make new
-                            developments. I have a great deal of flexibility in working in any kind of environment. </p>
-                    </div>
+                            developments. I have a great deal of flexibility in working in any kind of environment.</p>
 
-                </div>
-            </div>
-        </div>
-        <br>
+                    </div><!-- /col-lg-8 -->
+                </div><!-- /row -->
+            </div> <!-- /container -->
+        </div><!-- /ww -->
 
-
-        <div class="social-about">
+        <div class="social" style="position:absolute; bottom:-5%;">
             <a href="https://www.facebook.com/profile.php?id=100009562697868" target="_blank"><i
                     class="fab fa-facebook"></i></a>
             <a href="https://linkedin.com/in/jawad-a-892149141" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/JawadAhmed2" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://twitter.com/JawadNamal2002" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
-    </div>
+    </div><!-- /container -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/bootstrap.min.js"></script>
 </body>
 
 </html>

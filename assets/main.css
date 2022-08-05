@@ -140,3 +140,15 @@ progress {background-color: black;}
 .social a:hover {
   color: orange;
 }
+
+.about-imag img {
+  border: 2px solid #ffffff;
+  border-radius: 103px;
+}
+
+#ww {
+	padding-top: 5px;
+	padding-bottom: 5px;
+  
+	background-color: #f2f2f2;
+}
