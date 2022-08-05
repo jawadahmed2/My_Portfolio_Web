@@ -121,3 +121,22 @@ hr {
 /* background: */
 progress::-webkit-progress-bar {background-color: black; width: 100%;}
 progress {background-color: black;}
+
+/* Customized Social Media Class */
+.social {
+  margin-left: 10%;
+  margin-top: 100px;
+  position: absolute;
+  right: 40%;
+  bottom:-2%;
+}
+
+.social a {
+  font-size: 30px;
+  color: #212121;
+  margin-right: 20px;
+}
+
+.social a:hover {
+  color: orange;
+}
