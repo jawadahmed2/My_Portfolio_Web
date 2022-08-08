@@ -32,7 +32,7 @@ def contact():  # sourcery skip: last-if-guard
             #     f'https://docs.google.com/spreadsheets/d/{sheet_id}/edit?format=csv', mode='a', index=False, header=False)
             # print('yes')
 
-        return render_template('index.html')
+        return render_template('index.html', to_gsheet = new_row)
     return render_template('index.html')
 
 
