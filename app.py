@@ -1,16 +1,16 @@
-from flask import Flask, render_template, request, json
+from flask import Flask, render_template, request
 import pandas as pd
 # Google Sheets API Setup
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
 app = Flask(__name__)
-credential = ServiceAccountCredentials.from_json_keyfile_name("static/inlaid-tribute-358817-f455c0373ef9.json",
-                                                              ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive.file",  "https://www.googleapis.com/auth/drive"])
+
 
 @app.route('/')
 def index():
     return render_template('index.html')
+
 
 @app.route("/contact", methods=["GET", "POST"])
 def contact():  # sourcery skip: last-if-guard
@@ -24,6 +24,9 @@ def contact():  # sourcery skip: last-if-guard
         read_csv = pd.read_csv(
             f'https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv')
         if (record['email'].to_numpy())[0] not in read_csv['email'].to_numpy():
+            credential = ServiceAccountCredentials.from_json_keyfile_name("static/inlaid-tribute-358817-f455c0373ef9.json",
+                                                                          ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive.file",  "https://www.googleapis.com/auth/drive"])
+
             client = gspread.authorize(credential)
             gsheet = client.open("contact_data").sheet1
             new_row = gsheet.append_row(
@@ -32,7 +35,7 @@ def contact():  # sourcery skip: last-if-guard
             #     f'https://docs.google.com/spreadsheets/d/{sheet_id}/edit?format=csv', mode='a', index=False, header=False)
             # print('yes')
 
-        return render_template('index.html', to_gsheet = new_row)
+        return render_template('index.html', to_gsheet=new_row)
     return render_template('index.html')
 
 
