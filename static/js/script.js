@@ -71,3 +71,44 @@ $(document).ready(function () {
         }
     });
 });
+
+
+$(document).ready(function () {
+
+    $("#contact-btn").click(function (event) {
+
+
+        $.ajax({
+
+            url: '/contact',
+            type: 'POST',
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest'
+            },
+            contentType: 'application/JSON; charset= utf-8',
+            data: JSON.stringify({
+                name: $('#name').val(),
+                email: $('#email').val(),
+                message: $('#message').val(),
+            }),
+
+        }).done(function (data) {
+
+                if (data.error) {
+                    $('#errorAlert').text(data.error).show();
+                    $('#successAlert').hide();
+                }
+                else {
+                    $('#successAlert').text(data.name).show();
+                    $('#errorAlert').hide();
+                    
+
+                }
+
+            });
+
+        event.preventDefault();
+
+    });
+
+});
