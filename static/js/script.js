@@ -77,6 +77,9 @@ $(document).ready(function () {
 
     $("#contact-btn").click(function (event) {
 
+        $('#errorAlert').hide();
+        $('#successAlert').hide();
+        $('#waitAlert').text('Wait Message Is Sending').show();
 
         $.ajax({
 
@@ -94,18 +97,19 @@ $(document).ready(function () {
 
         }).done(function (data) {
 
-                if (data.error) {
-                    $('#errorAlert').text(data.error).show();
-                    $('#successAlert').hide();
-                }
-                else {
-                    $('#successAlert').text(data.name).show();
-                    $('#errorAlert').hide();
-                    
+            if (data.error) {
+                $('#errorAlert').text(data.error).show();
+                $('#successAlert').hide();
+                $('#waitAlert').hide();
+            }
+            else {
+                $('#successAlert').text(data.name).show();
+                $('#errorAlert').hide();
+                $('#waitAlert').hide();
 
-                }
+            }
 
-            });
+        });
 
         event.preventDefault();
 
